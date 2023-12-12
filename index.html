@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/5133a64235.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    
+    
+    <div id="header">
+       <div class="container">
+        <nav>
+            <ul id="sidemenu">
+               
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>Multimedia designer</p>
+            <h1>Inona Zivanovic</h1>
+        </div>
+    </div>
+    <!-----------------------about-------------------------------->
+   
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                     
+                </div>
+                <div class="about-col-2">
+                    
+                    <br>
+                    <p>Photographer.</p>
+                    <p> Multimedia designer (Adobe Photoshop, Illustrator, InDesign, Premiere Pro, After Effects),</p>   
+                    <p>Frontend developer (HTML, CSS, SAAS, Bootstrap).</p>
+                    </p>
+                         <br>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links "onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul style="padding-left:0">
+                                <li>Design, photography, videography</li>
+                                <br>
+                                <li>Frontend development</li>
+                               
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul style="padding-left: 0;">
+                                <li>Qatar Airways</li>
+                                <br>
+                                <li>RTS - National Broadcasting Service</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul style="padding-left: 0;">
+                                <li>Multimedia designer</li>
+                                <br>
+                                <li>Philologist of Arabic language and literature</li>
+                            
+                            </ul>
+                         </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<!---------------------------services------------------------------------>
+
+<div id="services">
+    <div class="container">
+        <h2 class="sub-title">What I do:</h2>
+        <br>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-spider"></i>
+                <h2>Web design</h2>
+                <p>From initial idea to a complete solution, including graphical solutions, photos, visual part of the website as well as it's functionality.</p>
+                    <a href="./pages/webdesign.html">See more</a>
+            </div>
+            <div>
+
+
+                <i class="fas fa-hat-wizard"></i>
+                <h2>Art & Design</h2>
+                <p>Drawing, painting, collage, brand and logo design, product/package design, graphic design, animations, illustrations. </p>
+                <a href="./pages/design.html">See more</a>
+            </div>
+            <div>
+
+                
+                <i class="fas fa-camera"></i>
+                 <h2>Photography</h2>
+                <p>Portrait, event, travel, fine art, lifestyle, fashion, still life, sports, editorial, architectural photography and editing.</p>
+                <a href="./pages/photo.html">See more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------------------contact-------------------->
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">You can find me here:</h2>
+                
+                <div class="social-icons">
+                    <a href="mailto:inona.zivanovic@yahoo.com"><i class="fab fa-yahoo"></i></a>
+                     <a href="http://instagram.com/SkyNomadphoto"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.linkedin.com/in/inona-%F0%9F%A7%99%E2%80%8D%E2%99%80%EF%B8%8F-54a819aa/"><i class="fab fa-linkedin"></i></a>       
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="copyright">
+        <i class="fa-solid fa-cog fa-spin"></i>
+        <i class="fa-solid fa-frog"></i>
+        <i class="fa-solid fa-cog fa-spin" style="--fa-animation-direction: reverse;" ></i>
+     </div>
+
+     <p id="tagline">Made with love in a far, far away galaxy...</p>
+
+</div>
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+    const bodyEl = document.querySelector("body")
+
+bodyEl.addEventListener("mousemove", (event)=>{
+    const xPos = event.offsetX;
+    const yPos = event.offsetY;
+    const spanEl = document.createElement("span");
+    spanEl.style.left = xPos + "px";
+    spanEl.style.top = yPos + "px";
+    const size = Math.random()*10;
+    spanEl.style.width = size + "px";
+    spanEl.style.height = size + "px";
+    bodyEl.appendChild(spanEl);
+    setTimeout(()=>{
+        spanEl.remove();
+    }, 6000);
+});
+src="index.js";
+</script>
+
+
+</body>
+</html>
